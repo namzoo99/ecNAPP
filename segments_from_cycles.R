@@ -1,5 +1,3 @@
-#!usr/bin/env Rscript
-
 library(dplyr)
 library(optparse)
 
