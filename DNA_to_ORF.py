@@ -1,3 +1,5 @@
+#!/usr/bin/python
+
 ### Import all functions
 
 ## Function to read fasta files
