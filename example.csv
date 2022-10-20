@@ -1,0 +1,2 @@
+project,barcode,docker_bind_path,input,reference,workdir,outdir,svaba_ref_path,DBSNP_path,moseklic,AArepo
+SNUBRC,SNUBRC-SNUHP-0001-TPX-A01-WGS-EQEPOC,/mnt/NAS,/mnt/NAS/home/mary/HL-NF/SNUBRC-SNUHP-0001-TPX-A01-WGS-EQEPOC.bam,GRCh37,/mnt/NAS/home/mary/test_neo,/mnt/NAS/home/mary/by_neo_results,/mnt/NAS/storage/references/GRCh37/human_g1k_v37_decoy.fasta,/mnt/NAS/storage/references/GRCh37/snowman/dbsnp_indel.vcf,/home/mary/HL-NF/conf,/mnt/NAS/storage/AA-suite-ref
