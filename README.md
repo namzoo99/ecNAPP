@@ -22,7 +22,7 @@ created by Harold and Mary of CBM LAB
 | AArepo           | directory of AA repo                            |
 	
 
-the `docker_bind_path` must be the parent folder of `input`, `workdir`, `outdir`, `svaba_ref`, and `DBSNP`. Check our [example.csv](https://github.com/skadbswn/ecNAPP/blob/main/example.csv) for more info.
+**the `docker_bind_path` must be the parent folder of `input`, `workdir`, `outdir`, `svaba_ref`, and `DBSNP`. Check our [example.csv](https://github.com/skadbswn/ecNAPP/blob/main/example.csv) for more info.**
 
 ## 1. [AmpliconSuite-pipeline](https://github.com/jluebeck/AmpliconSuite-pipeline)
 
