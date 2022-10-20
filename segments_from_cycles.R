@@ -21,5 +21,5 @@ amplicon_segments_end <- data.frame(amplicon_segments$chr, amplicon_segments$end
 colnames(amplicon_segments_start) <- c("chr", "pos")
 colnames(amplicon_segments_end) <- c("chr", "pos")
 segment_positions <- rbind(amplicon_segments_start, amplicon_segments_end) %>% unique()
-segment_positions$pos <- segment_positions$pos +1
+segment_positions$pos <- segment_positions$pos+1
 write.table(segment_positions,opt$output, quote = F, col.names = F, row.names = F)
