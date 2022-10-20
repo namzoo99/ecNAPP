@@ -1,5 +1,4 @@
-# ecNAPP
-# Let's look for neoantigens!
+# ecNAPP - Let's look for neoantigens!
 
 created by Harold and Mary of CBM LAB
 
