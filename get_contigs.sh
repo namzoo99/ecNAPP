@@ -27,6 +27,7 @@ sed "s/SCTG=//; s/;//" ${output}/bp.contigs > ${output}/${barcode}.contigs.txt
 echo "done!"
 
 ## Find contigs from alignment.txt
+tar -zxf ${svabapath}/${barcode}.alignments.txt.gz
 cat ${output}/${barcode}.contigs.txt | while read line
 do
         echo "looking for $line ..."
