@@ -1,6 +1,7 @@
 library(readr)
 library(dplyr)
 library(tidyr)
+library(optparse)
 
 option_list <- list(
   make_option(c("-i", "--input"), type="character", default=NULL, help="Input file path(annotated)"),
