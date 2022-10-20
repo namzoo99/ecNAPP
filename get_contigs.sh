@@ -19,20 +19,22 @@ cat ${output}/${barcode}.processed.bps | while read line
 
 
 ## Trim only contigs to match alignment.txt
-cat ${output}/breakpoint.svaba | awk '{print $8}' | grep -o "SCTG.*[A-Z];" > ${output}/bp.contigs
+cat ${output}/breakpoint.svaba | awk '{print $8}' | grep -o "SCTG.*C;" > ${output}/bp.contigs
 echo "contigs extracted..."
 
-sed "s/SCTG=//; s/;//" ${output}/bp.contigs > ${output}/${barcode}.contigs.txt
+sed "s/SCTG=//; s/;//" ${output}/bp.contigs > ${output}/${barcodae}.contigs.txt
+cat ${output}/${barcode}.contigs.txt | sort -u > ${output}/${barcode}.contigs.unique.txt
 #rm bp.contigs
 echo "done!"
 
 ## Find contigs from alignment.txt
-gunzip ${svabapath}/${barcode}.alignments.txt.gz
-cat ${output}/${barcode}.contigs.txt | while read line
+
+
+cat ${output}/${barcode}.contigs.unique.txt | while read line
 do
-        echo "looking for $line ..."
-        awk -v RS="" -v ORS="\n\n" "/$line/" ${svabapath}/${barcode}.alignments.txt >> ${output}/${barcode}.bps-align.txt
-	echo "$line done"
+ echo "looking for $line ..."
+ awk -v RS="" -v ORS="\n\n" "/$line/" ${svabapath}/${barcode}.alignments.txt >> ${output}/${barcode}.bps-align.txt
+ echo "$line done"
 done
 
 ## Organize the alignments to only contig reference sequence
@@ -45,4 +47,3 @@ paste ${output}/only2_added.txt ${output}/only1.txt > ${output}/changed.txt
 sed 's/\t/\n/g' ${output}/changed.txt > ${output}/${barcode}.fasta.txt
 
 rm ${output}/EQEPOC.txt ${output}/EQEPOC_filtered.txt ${output}/only1.txt ${output}/only2.txt ${output}/only2_added.txt ${output}/changed.txt
-
