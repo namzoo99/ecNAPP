@@ -26,6 +26,8 @@ created by Harold and Mary of CBM LAB
 
 ## 1. [AmpliconSuite-pipeline](https://github.com/jluebeck/AmpliconSuite-pipeline)
 
+```version```: If you git clone AmpliconSuite-pipeline befoe 10.15.22, version is **0.1203.12**. But if you initally git clone, it is **latest** version
+
 The arguments are absed on the `HL-NF:AmpliconArchitect`, which are ``` --AA_extendmode EXPLORE --AA_runmode FULL ```. 
 To download MOSEK liscence(mosek.lic), visit [HERE](https://www.mosek.com/products/academic-licenses/).
 
@@ -37,11 +39,15 @@ Genome build should be downloaded with `_indexed` files.
 
 ## 2. [SVABA](https://github.com/walaj/svaba)
 
+```version```: **v.1.1.3**
+
 We used docker image for our pipeline. Since `SVABA` does not have output argument, the `BAM` files need to be placed where the output should be placed using symlink.
 
 After the run, script automatically removes the symlink.
 
 ## 3. [POLYSOLVER](https://hub.docker.com/r/sachet/polysolver)
+
+```version```: **v.4**
 
 We also used docker image for polysolver. Since it has its own reference inside the image, we can choose genome build by argument, `hg19` or `hg38`.
 
