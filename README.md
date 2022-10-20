@@ -7,6 +7,7 @@ created by Harold and Mary of CBM LAB
 1) Docker
 2) mosek license and reference data for AA-suite, svaba
 3) csv file consisted of:
+
 | colnames         | definition                                      |
 |------------------|-------------------------------------------------|
 | project          | project name                                    |
