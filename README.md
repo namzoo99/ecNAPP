@@ -3,6 +3,9 @@
 
 created by Harold and Mary of CBM LAB
 
+## Workflow of ecNAPP
+<img width="1440" alt="workflow" src="https://user-images.githubusercontent.com/86759935/197321930-562045ac-be55-4d30-a2ee-6833c1847ba0.png">
+
 ## For the use of this script, please prepare
 1) Docker
 2) mosek license and reference data for AA-suite, svaba
