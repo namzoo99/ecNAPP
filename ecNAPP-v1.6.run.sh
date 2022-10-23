@@ -228,7 +228,7 @@ do
         fi
 
         echo "get bps from _graph.txt"
-        if  [ ! -s ${outdir}/${project}/${barcode}/preneos/breakpoints_from_graphs.unique.txt ]; then
+        if  [ ! -s ${outdir}/${project}/${barcode}/preneos/${barcode}.processed.bps ]; then
 
             echo "${outdir}/${project}/${barcode}/aa-suite/${aaresults} ${outdir}/${project}/${barcode}/preneos ${barcode}"
             bash ${workdir}/neoantigen/ecNAPP/breakpoints_to_txt.sh ${outdir}/${project}/${barcode}/aa-suite/${aaresults} ${outdir}/${project}/${barcode}/preneos ${barcode}
