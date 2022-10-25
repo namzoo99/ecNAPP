@@ -3,7 +3,7 @@
     echo "
     ###########################################################################
                              
-                                      ecNAPP 
+                                        ecNAPP
 
                             let's look for neoantigens!
 
@@ -183,10 +183,8 @@ do
             
         if [ "$ref" == "GRCh37" -o  "$ref" == "hg19" ]; then
                 svaref="GRCh37"
-            elif [ "$ref" == "GRCh38" -o "$ref" == "hg38" ]; then 
+        elif [ "$ref" == "GRCh38" -o "$ref" == "hg38" ]; then 
                 svaref="GRCh38"
-            else
-                echo "Running sva_$svaref.sh"
         fi
 
 
