@@ -13,7 +13,7 @@ done
 ## Find breakpoints from AA that match svaba 
 cat ${output}/${barcode}.processed.bps | while read line
         do
-        grep -w "$line" ${svabapath}/${barcode}.svaba.unfiltered.sv.vcf >> ${output}/breakpoint.svaba
+        grep -w "$line" ${svabapath}/${barcode}.svaba.unfiltered.somatic.sv.vcf  >> ${output}/breakpoint.svaba
         echo "$line done"
         done
 
