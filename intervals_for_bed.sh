@@ -1,11 +1,14 @@
 #!bin/bash
+if [ -e ${2}/intervals_for_bp.txt ];
+then rm ${2}/intervals_for_bp.txt
+fi
 
 grep "Interval" ${1}/*_cycles.txt | while IFS='	', read -r col1 col2 col3 col4 col5
 do echo -e "chr${col3}:${col4}\t${col5}" >> ${1}/bp_to_bed_regions
 done
 
 
-i='1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 X Y'
+i='1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 X Y'
 for i in ${i}; do
 cat ${1}/bp_to_bed_regions | sort -u | grep "chr${i}:" > ${1}/chr_${i}
 
@@ -24,7 +27,6 @@ fi
 
 done
 
-cat ${2}/intervals | tr "\n" " " > ${2}/intervals_inline
-sort -u ${2}/intervals_inline > ${2}/intervals_for_bp.txt
+cat ${2}/intervals | sort -u | tr "\n" " " > ${2}/intervals_for_bp.txt
 
 rm ${1}/chr_* ${1}/sort-chr-* ${1}/min-max-chr-*
