@@ -1,4 +1,5 @@
 #!bin/bash
+## for GRCh38
 
 cat ${1}/${2}_BP.bed |  awk '{print $1, $2}' > ${1}/${2}_startPOS.txt
 cat ${1}/${2}_BP.bed |  awk '{print $3, $4}' > ${1}/${2}_endPOS.txt
