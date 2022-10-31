@@ -4,7 +4,7 @@
 created by Harold and Mary of CBM LAB
 
 ## Workflow of ecNAPP
-![ing](https://user-images.githubusercontent.com/86759935/197664259-afd77033-8b9a-4e87-9ce1-db2d7d5e3bbd.png)
+![ing](https://user-images.githubusercontent.com/86759935/198952280-ea38ed73-16d7-484f-af9a-475aa0b6af09.png)
 
 
 ## For the use of this script, please prepare
