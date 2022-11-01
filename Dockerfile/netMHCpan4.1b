@@ -1,0 +1,18 @@
+######################################
+#	namzoo/netMHCpan4.1b         #
+######################################
+
+FROM ubuntu:20.04
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y unzip wget vim git g++ zlib1g-dev cmake libbz2-dev=1.0.8-2 liblzma-dev 
+
+RUN mkdir -p /home
+RUN cd /home
+RUN wget https://services.healthtech.dtu.dk/download/9f042f8f-cfe8-443c-abec-78a2fa45ee39/netMHCpan-4.1b.Linux.tar.gz
+RUN cat netMHCpan-4.1b.Linux.tar.gz | uncompress | tar xvf -
+RUN cd netMHCpan-4.1
+RUN wget https://services.healthtech.dtu.dk/download/9f042f8f-cfe8-443c-abec-78a2fa45ee39/netMHCpan-4.1_license.txt
+RUN wget https://services.healthtech.dtu.dk/services/NetMHCpan-4.1/data.tar.gz
+RUN tar -xvf data.tar.gz
